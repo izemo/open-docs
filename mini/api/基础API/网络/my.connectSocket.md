@@ -145,7 +145,7 @@ Object 类型，参数如下：
 
 | **参数** | **类型** | **必填** | **描述** |
 | --- | --- | --- | --- |
-| url | String | 是 | 目标服务器接口地址。<br />**注意：** 部分新发布的小程序只支持 wss 协议。 |
+| url | String | 是 | 目标服务器接口地址。只支持 wss 协议。 |
 | data | Object | 否 | 请求的参数。 |
 | header | Object | 否 | 设置请求的头部。 |
 | multiple | Boolean | 否 | 是否多实例。传入 true 时，将返回一个包含 SocketTask 实例。 |
