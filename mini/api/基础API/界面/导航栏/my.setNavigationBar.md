@@ -7,6 +7,7 @@
 - 导航栏左上角 LOGO 图片支持 GIF 格式，必须使用 HTTPS 图片链接。
 - 若设置了导航栏背景色 backgroundColor，则导航栏底部边框颜色 borderBottomColor 不会生效，默认会和 backgroundColor 颜色一样。
 - 导航栏背景色不支持渐变色。
+- 设置 frontColor 时，需要同时设置 backgroundColor，或将 reset 设置为 true。否则会报错：“颜色值不合法”
 - 此 API 支持个人支付宝小程序、企业支付宝小程序使用。
 
 ## 扫码体验
@@ -60,6 +61,14 @@ Object 类型，参数如下：
 | success | Function | 否 | 调用成功的回调函数。 |
 | fail | Function | 否 | 调用失败的回调函数。 |
 | complete | Function | 否 | 调用结束的回调函数（调用成功、失败都会执行）。 |
+
+## 错误码
+
+fail 回调会收到一个 Object 类型的参数，其 error 字段为错误码：
+
+| **错误码** | **说明** | **解决方案** |
+| --- | --- | --- |
+| 2 | 颜色值不合法 | 1.检查类型是否传错；2.设置 frontColor 时，需要同时设置 backgroundColor，或将 reset 设置为 true |
 
 # 常见问题
 
